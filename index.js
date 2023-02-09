@@ -13,6 +13,9 @@ async function START() {
                 "BTC: $" + response.BTC.quotes.USD.price + "\n" +
                 "ETH: $" + response.ETH.quotes.USD.price + "\n" +
                 "SOL: $" + response.SOL.quotes.USD.price + "\n" +
+                "ATOM: $" + response.ATOM.quotes.USD.price + "\n" +
+                "BNB: $" + response.BNB.quotes.USD.price + "\n" +
+                "SAND: $" + response.SAND.quotes.USD.price + "\n" +
                 "━━ Update ━━━━━━━━━━━" + "\n" +
                 date.toUTCString() + "\n"
 

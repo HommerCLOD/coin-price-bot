@@ -1,6 +1,6 @@
 const axios = require("axios")
 
-const { BTC, ETH, SOL } = require("./../const/crypto_ticker_id")
+const { BTC, ETH, SOL, ATOM, BNB, SAND } = require("./../const/crypto_ticker_id")
 
 async function get_crypto_tickers() {
     try {
@@ -9,9 +9,12 @@ async function get_crypto_tickers() {
         const result = {
             BTC: response.data.data[BTC],
             ETH: response.data.data[ETH],
-            SOL: response.data.data[SOL]
+            SOL: response.data.data[SOL],
+            ATOM: response.data.data[ATOM],
+            BNB: response.data.data[BNB],
+            SAND: response.data.data[SAND]
         }
-        
+
         return result
     } catch (error) {
         console.log(error)
