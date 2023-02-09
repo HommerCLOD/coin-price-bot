@@ -9,10 +9,12 @@ async function START() {
 
             let date = new Date()
             let message =
+                "━━ Ticker ━━━━━━━━━━━" + "\n" +
                 "BTC: $" + response.BTC.quotes.USD.price + "\n" +
                 "ETH: $" + response.ETH.quotes.USD.price + "\n" +
                 "SOL: $" + response.SOL.quotes.USD.price + "\n" +
-                "Update: " + date.toUTCString() + "\n"
+                "━━ Update ━━━━━━━━━━━" + "\n" +
+                date.toUTCString() + "\n"
 
             await Telegram.update_message(message)
         } catch (error) {
