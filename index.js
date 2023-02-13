@@ -20,7 +20,7 @@ async function START() {
                 "ATOM: $" + response.ATOM.quotes.USD.price + "\n" +
                 "BNB: $" + response.BNB.quotes.USD.price + "\n" +
                 "SAND: $" + response.SAND.quotes.USD.price + "\n" +
-                "━━ Fear and Greed ━━━━━━━━━━━" + "\n" +
+                "━━ Fear and Greed ━━━━━━━" + "\n" +
                 fear_and_greed.value_classification + ": " + fear_and_greed.value + "\n" +
                 "━━ Update ━━━━━━━━━━" + "\n" +
                 date.toUTCString() + "\n"
