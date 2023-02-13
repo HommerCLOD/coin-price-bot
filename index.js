@@ -1,8 +1,9 @@
 const Telegram = require("./bots/telegram")
+const { intro } = require("./message")
 const Crypto_API = require("./service/alternative")
 
 async function START() {
-
+    intro()
     setInterval(async () => {
         try {
             const response = await Crypto_API.get_crypto_tickers()
