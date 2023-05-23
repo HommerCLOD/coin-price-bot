@@ -34,13 +34,17 @@ async function get_single_crypto_asset(ticker) {
 }
 
 async function get_fear_and_greed_index() {
-    const response = await axios.get("https://api.alternative.me/fng/")
+    try {
+        const response = await axios.get("https://api.alternative.me/fng/")
 
-    const result = {
-        value: response.data.data[0].value,
-        value_classification: response.data.data[0].value_classification
+        const result = {
+            value: response.data.data[0].value,
+            value_classification: response.data.data[0].value_classification
+        }
+        return result
+    } catch (error) {
+        console.log(error)
     }
-    return result
 }
 
 module.exports = {

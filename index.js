@@ -1,6 +1,7 @@
 const Telegram = require("./bots/telegram")
 const { intro } = require("./message")
 const Crypto_API = require("./service/alternative")
+const { get_gas_oracle } = require("./service/etherscan")
 
 async function START() {
     intro()
@@ -25,11 +26,25 @@ async function START() {
                 "━━ Update ━━━━━━━━━━" + "\n" +
                 date.toUTCString() + "\n"
 
-            await Telegram.update_message(message)
+            await Telegram.update_message(message, 3)
         } catch (error) {
             console.log(error)
         }
     }, 120000)
+
+    await update_gas()
+}
+
+async function update_gas() {
+    setInterval(async () => {
+        try {
+            const message = await get_gas_oracle()
+
+            await Telegram.update_message(message, 8)
+        } catch (error) {
+            console.log(error)
+        }
+    }, 5000);
 }
 
 START()
