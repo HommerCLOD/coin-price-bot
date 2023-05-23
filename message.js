@@ -20,7 +20,8 @@ const FORMATTED_LOGO =
   "                          <       >----'" + "\n" +
   "                           \\_____/" + "\n" +
   "" + "\n" +
-  "" + "\n"
+  "" + "\n" +
+  "   Coin Price Bot"
 
 
 function intro() {

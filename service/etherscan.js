@@ -7,16 +7,15 @@ async function get_gas_oracle() {
         const response = await axios.get("https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=" + ETHER_SCAN_APIKEY)
 
         const result = response.data.result
-
+        const date = new Date()
         const message =
-            `⚡${result.FastGasPrice} 🚶${result.ProposeGasPrice} 🐢${result.SafeGasPrice}
-        ━━ GAS ━━━━━━━━━━━━━━\n
-        ⚡${result.FastGasPrice} 🚶${result.ProposeGasPrice} 🐢${result.SafeGasPrice}
-        Suggest Base Fee: ${result.suggestBaseFee}`
-
+            `⚡${result.FastGasPrice} 🚶${result.ProposeGasPrice} 🐢${result.SafeGasPrice}` + "\n" +
+            "━━ GAS ━━━━━━━━━━━━" + "\n" +
+            `⚡${result.FastGasPrice} 🚶${result.ProposeGasPrice} 🐢${result.SafeGasPrice}` + "\n" +
+            `Suggest Base Fee: ${result.suggestBaseFee}` + "\n" +
+            "━━ Update ━━━━━━━━━━" + "\n" +
+            `${date.toUTCString()}` + "\n"
         return message
-        console.log(response.data)
-        console.log("⚡ 🚶 🐢")
     } catch (error) {
         console.log(error)
     }

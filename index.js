@@ -40,11 +40,11 @@ async function update_gas() {
         try {
             const message = await get_gas_oracle()
 
-            await Telegram.update_message(message, 8)
+            await Telegram.update_message(message, 9)
         } catch (error) {
             console.log(error)
         }
-    }, 5000);
+    }, 10000)
 }
 
 START()
