@@ -24,9 +24,9 @@ async function send_message(chat_id, content) {
     }
 }
 
-async function update_message(text) {
+async function update_message(text, message_id) {
     try {
-        const response = await bot.editMessageText(`${text}`, { chat_id: CHAT_ID, message_id: 3 })
+        const response = await bot.editMessageText(`${text}`, { chat_id: CHAT_ID, message_id })
         console.log(response)
     } catch (error) {
         console.log(error)
