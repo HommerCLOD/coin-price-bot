@@ -6,18 +6,22 @@ const { BOT_TOKEN, CHAT_ID } = require("../config/tg-config")
 const bot = new TelegramBot(BOT_TOKEN, { polling: true })
 
 async function bot_launch() {
-    bot.on("polling_error", console.log)
+    bot.on("polling_error", (error) => { console.log(error) })
 }
 
 async function send_message(chat_id, content) {
-    const config = {
-        chat_id: chat_id,
-        text: content
+    try {
+        const config = {
+            chat_id: chat_id,
+            text: content
+        }
+
+        const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`
+
+        await axios.post(url, config)
+    } catch (error) {
+        console.log(error)
     }
-
-    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`
-
-    await axios.post(url, config)
 }
 
 async function update_message(text) {
