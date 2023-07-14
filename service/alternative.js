@@ -1,6 +1,6 @@
 const axios = require("axios")
 
-const { BTC, ETH, SOL, ATOM, BNB, SAND } = require("./../const/crypto_ticker_id")
+const { BTC, ETH, SOL, ATOM, BNB, SAND, XRP, DOT, AVAX, TRX, CAKE, NEAR, WAX } = require("./../const/crypto_ticker_id")
 
 async function get_crypto_tickers() {
     try {
