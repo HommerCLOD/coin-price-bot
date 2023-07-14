@@ -8,6 +8,7 @@ async function START() {
 
     setInterval(async () => {
         try {
+            console.log(new Date(), "Try to update")
             const response = await Crypto_API.get_crypto_tickers()
 
             const fear_and_greed = await Crypto_API.get_fear_and_greed_index()
