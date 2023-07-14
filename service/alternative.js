@@ -12,7 +12,14 @@ async function get_crypto_tickers() {
             SOL: response.data.data[SOL],
             ATOM: response.data.data[ATOM],
             BNB: response.data.data[BNB],
-            SAND: response.data.data[SAND]
+            SAND: response.data.data[SAND],
+            XRP: response.data.data[XRP],
+            DOT: response.data.data[DOT],
+            AVAX: response.data.data[AVAX],
+            TRX: response.data.data[TRX],
+            CAKE: response.data.data[CAKE],
+            NEAR: response.data.data[NEAR],
+            WAX: response.data.data[WAX]
         }
 
         return result

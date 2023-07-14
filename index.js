@@ -21,6 +21,13 @@ async function START() {
                 "ATOM: $" + response.ATOM.quotes.USD.price + "\n" +
                 "BNB: $" + response.BNB.quotes.USD.price + "\n" +
                 "SAND: $" + response.SAND.quotes.USD.price + "\n" +
+                "XRP: $" + response.XRP.quotes.USD.price + "\n" +
+                "DOT: $" + response.DOT.quotes.USD.price + "\n" +
+                "AVAX: $" + response.AVAX.quotes.USD.price + "\n" +
+                "TRX: $" + response.TRX.quotes.USD.price + "\n" +
+                "CAKE: $" + response.CAKE.quotes.USD.price + "\n" +
+                "NEAR: $" + response.NEAR.quotes.USD.price + "\n" +
+                "WAX: $" + response.WAX.quotes.USD.price + "\n" +
                 "━━ Fear and Greed ━━━━━━━" + "\n" +
                 fear_and_greed.value_classification + ": " + fear_and_greed.value + "\n" +
                 "━━ Update ━━━━━━━━━━" + "\n" +
